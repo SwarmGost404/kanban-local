@@ -4,8 +4,8 @@
 ```bash
 git clone https://github.com/SwarmGost404/kanban-local.git
 cd kanban-local
-docker build -t vue-kanban .
-docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
+sudo docker build -t vue-kanban .
+sudo docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
 ```
 
 -
@@ -13,8 +13,8 @@ docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
 ## start
 
 ```bash
-docker build -t vue-kanban .
-docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
+sudo docker build -t vue-kanban .
+sudo docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
 ```
 
 - 
@@ -22,7 +22,7 @@ docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
 ## stop 
 
 ```bash
-docker stop vue-kanban
+sudo docker stop vue-kanban
 ```
 
 -
@@ -30,5 +30,5 @@ docker stop vue-kanban
 ## restart
 
 ```bash 
-docker restart vue-kanban
+sudo docker restart vue-kanban
 ```
