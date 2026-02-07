@@ -33,3 +33,5 @@ sudo docker remove vue-kanban
 ```bash 
 sudo docker restart vue-kanban
 ```
+
+<em>I can create online desk, if you`ll send 10 stars</em>
