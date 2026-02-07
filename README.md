@@ -1,11 +1,13 @@
 # stard in Docker
 
+- start on (this){http://localhost:4040}
+
 ## First start
 ```bash
 git clone https://github.com/SwarmGost404/kanban-local.git
 cd kanban-local
 sudo docker build -t vue-kanban .
-sudo docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
+sudo docker run -d -p 4040:4040 --name vue-kanban --restart unless-stopped vue-kanban
 ```
 
 -
@@ -14,7 +16,7 @@ sudo docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kan
 
 ```bash
 sudo docker build -t vue-kanban .
-sudo docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
+sudo docker run -d -p 4040:4040 --name vue-kanban --restart unless-stopped vue-kanban
 ```
 
 - 

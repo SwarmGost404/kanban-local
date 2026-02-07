@@ -1,14 +1,16 @@
-FROM nginx:alpine
+FROM node:20-alpine
 
-# Удаляем дефолтный конфиг
-RUN rm /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Копируем свой конфиг
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Копируем package.json и устанавливаем зависимости
+COPY package*.json ./
+RUN npm install
 
-# Копируем билд Vue
-COPY --from=build /app/dist /usr/share/nginx/html
+# Копируем весь проект
+COPY . .
 
-EXPOSE 80
+# Экспонируем порт Vite (обычно 5173)
+EXPOSE 4040
 
-CMD ["nginx", "-g", "daemon off;"]
+# Команда запуска Vite dev server
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
