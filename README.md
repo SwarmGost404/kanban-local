@@ -16,8 +16,11 @@ docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
 docker build -t vue-kanban .
 docker run -d -p 8080:80 --name vue-kanban --restart unless-stopped vue-kanban
 ```
+
 - 
+
 ## stop 
+
 ```bash
 docker stop vue-kanban
 ```
@@ -25,6 +28,7 @@ docker stop vue-kanban
 -
 
 ## restart
+
 ```bash 
 docker restart vue-kanban
 ```
