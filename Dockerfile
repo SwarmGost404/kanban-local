@@ -1,16 +1,18 @@
-FROM node:20-alpine
+# Use a Node.js image for the development environment
+FROM node:lts-alpine
 
+# Set the working directory
 WORKDIR /app
 
-# Копируем package.json и устанавливаем зависимости
+# Copy package.json and install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Копируем весь проект
+# Copy the rest of the application code
 COPY . .
 
-# Экспонируем порт Vite (обычно 5173)
-EXPOSE 4040
+# Expose the default Vite development port (5173)
+EXPOSE 5173
 
-# Команда запуска Vite dev server
+# Command to run the development server, listening on all network interfaces
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
